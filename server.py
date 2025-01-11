@@ -7,7 +7,7 @@ from langchain_openai import ChatOpenAI
 from browser_use import Agent, Browser, BrowserConfig
 
 app = FastAPI()
-browser = Browser(config=BrowserConfig(headless=True, chrome_instance_path="http://127.0.0.1:9222"))
+browser = Browser(config=BrowserConfig(headless=True, chrome_instance_path="/usr/bin/google-chrome-stable"))
 
 current_agent = None
 
