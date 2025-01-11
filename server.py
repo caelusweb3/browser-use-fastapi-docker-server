@@ -25,7 +25,7 @@ async def query(request: QueryRequest):
     
     current_agent = Agent(
         task=request.task,
-        llm=ChatOpenAI(base_url="https://models.inference.ai.azure.com", model="gpt-4o-mini"),
+        llm=ChatOpenAI(model="gpt-4o-mini"),
         browser=browser,
     )
     result = await current_agent.run()
